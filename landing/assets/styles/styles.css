@@ -396,7 +396,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid rgba(63, 65, 65, 0.5);
+  border-bottom: 1px solid rgba(63, 65, 65, 0.05);
   padding-bottom: 24px;
   margin-bottom: 24px;
 }
