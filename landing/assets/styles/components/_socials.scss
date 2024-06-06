@@ -1,0 +1,30 @@
+.socials {
+    padding-right: 16px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        background-color: #3F4141;
+        opacity: .05;
+        right: 0;
+    }
+
+    &__item {
+        display: flex;
+        list-style: none;
+        margin: 0 8px;
+
+        &--link {
+            text-decoration: none;
+            padding: 7px;
+        }
+
+        &--icon {
+            width: 16px;
+            opacity: .5;
+        }
+    }
+}

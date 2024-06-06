@@ -1,0 +1,19 @@
+.header {
+    padding-top: 24px;
+
+    @media (max-width: 767px) {
+        padding-top: 20px;
+    }
+
+    &__logo {
+        width: 136px;
+
+        @media (max-width: 767px) {
+            width: 102px;
+        }
+
+        &--img {
+            width: 100%;
+        }
+    }
+}

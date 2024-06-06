@@ -1,0 +1,33 @@
+.language {
+    margin-left: 24px;
+
+    @media (max-width: 767px) {
+        margin-left: 16px;
+    }
+
+    &--btn {
+        padding: 7px 14px;
+        background-color: rgba(63, 65, 65, 0.05);
+        border: none;
+        border-radius: 8px;
+    }
+
+    &--flag {
+        margin-right: 10px;
+    }
+
+    &--text {
+        color: #3F4141;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &--icon {
+        margin-left: 10px;
+    }
+}
