@@ -9,7 +9,8 @@
         padding: 7px 14px;
         background-color: rgba(63, 65, 65, 0.05);
         border: none;
-        border-radius: 8px;
+        border-radius: 100px;
+        cursor: pointer;
     }
 
     &--flag {
@@ -29,5 +30,6 @@
 
     &--icon {
         margin-left: 10px;
+        opacity: 0.5;
     }
 }
