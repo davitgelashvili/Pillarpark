@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PILLARPARK</title>
+        <link href="https://free.bboxtype.com/embedfonts/?family=FiraGO:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/styles/owl.carousel.min.css">
+        <link rel="stylesheet" href="./assets/styles/bootstrap-grid.css">
+        <link rel="stylesheet" href="./assets/styles/styles.css">
     </head>
     <body>
         <div class="message">
             საიტის სრული ვერსია მალე გაეშვება
         </div>
-        <div id="header">
-        </div>
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="header__logo">
+                            <img src="./assets/images/logo.svg" class="header__logo--img" />
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-items-center">
+                        <ul class="socials d-flex">
+                            <li class="socials__item">
+                                <a href="" class="socials__item--link" target="_blank">
+                                    <img src="./assets/images/fb_icon.svg" class="socials__item--icon" />
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="" class="socials__item--link" target="_blank">
+                                    <img src="./assets/images/ig_icon.svg" class="socials__item--icon" />
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="" class="socials__item--link" target="_blank">
+                                    <img src="./assets/images/yt_icon.svg" class="socials__item--icon" />
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="language">
+                            <button class="language--btn d-flex align-items-center">
+                                <img src="./assets/images/flags/ge.png" class="language--flag" />
+                                <p class="language--text">
+                                    ქარ
+                                </p>
+                                <img src="./assets/images/arrow_down.svg" class="language--icon" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
         <div class="container">
             <div class="row">
@@ -50,16 +95,98 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <div id="slider">
+                    <div class="slider">
+                        <div class="slider--content owl-carousel">
+                            <div class="slider__item">
+                                <img src="./assets/images/slider1.png" class="slider__item--cover"/>
+                                <div class="slider__item--body">
+                                    <h1 class="slider__item--price">1,240 მ2</h1>
+                                    <h1 class="slider__item--desc">უნიკალური საცხოვრებელი სივრცე</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__footer d-flex align-items-center justify-content-center">
+                            <button class="slider__footer--btn slider--prev d-flex align-items-center">
+                                <img src="./assets/images/arrow_prev.svg" />
+                            </button>
+                            <div class="slider__dots owl-dots d-flex align-items-center justify-content-center">
+                                <div class="slider__dots--item"></div>
+                                <div class="slider__dots--item active"></div>
+                                <div class="slider__dots--item"></div>
+                            </div>
+                            <button class="slider__footer--btn slider--next d-flex align-items-center">
+                                <img src="./assets/images/arrow_next.svg" />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div id="popup"></div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="./function/include.js"></script>
+        <script src="./function/owl.carousel.min.js"></script>
+        <script src="./function/slider.js"></script>
         <script src="./function/function.js"></script>
+
+        <div class="popup">
+            <div class="popup--bg"></div>
+            <div class="popup__content">
+                <div class="popup__content--head">
+                    <h1 class="popup__content--title">
+                        დეტალური ინფორმაციის მისაღებად დაგვიტოვეთ თქვენი საკონტაქტო
+                    </h1>
+                    <button class="popup__content--close">
+                        <img src="./assets/images/close.svg">
+                    </button>
+                </div>
+                <form class="popup__form">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="input">
+                                <input type="text" placeholder="სახელი" />
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <label class="input">
+                                <input type="text" placeholder="გვარი" />
+                            </label>
+                        </div>
+                        <div class="col-12">
+                            <label class="input">
+                                <select>
+                                    <option>+995</option>
+                                </select>
+                                <input type="text" placeholder="მობილურის ნომერი" />
+                            </label>
+                        </div>
+                        <div class="col-12">
+                            <label class="input">
+                                <input type="text" placeholder="ელ.ფოსტა (არასავალდებულო)" />
+                            </label>
+                        </div>
+                        <div class="col-12">
+                            <label class="input">
+                                <textarea rows="4" placeholder="შეტყობინება (არასავალდებულო)"></textarea>
+                            </label>
+                        </div>
+                        <div class="col-12">
+                            <button class="popup__form--btn">
+                                გაგზავნა
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="d-flex align-items-center flex-column">
+                    <a href="" class="contact__item--link d-flex align-items-center">
+                        <img src="./assets/images/phone_icon.svg" class="contact__item--icon">
+                        (+995) 550 500 400
+                    </a>
+                    <a href="" class="contact__item--link d-flex align-items-center">
+                        <img src="./assets/images/email_icon.svg" class="contact__item--icon">
+                        sales@pillarpark.ge
+                    </a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
