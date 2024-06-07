@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILLARPARK</title>
+    <link href="https://free.bboxtype.com/embedfonts/?family=FiraGO:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/styles/bootstrap-grid.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+    <include src="./components/home/slider.html"></include>
+    <include src="./components/home/group.html"></include>
+    <include src="./components/home/projects.html"></include>
+
+
+    <script>
+        (() => {
+            const includes = document.getElementsByTagName('include');
+            [].forEach.call(includes, i => {
+                let filePath = i.getAttribute('src');
+                fetch(filePath).then(file => {
+                    file.text().then(content => {
+                        i.insertAdjacentHTML('afterend', content);
+                        i.remove();
+                    });
+                });
+            });
+        })();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/owl.carousel.min.js"></script>
+    <script src="./assets/javascript/slider.js"></script>
+    <script src="./assets/javascript/function.js"></script>
+</body>
+</html>

@@ -26,5 +26,4 @@ $(document).ready(function(){
     $('.slider--next').click(function() {
         Slider.trigger('next.owl.carousel');
     })
-    
 })
