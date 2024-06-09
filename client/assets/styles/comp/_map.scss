@@ -1,0 +1,17 @@
+.map {
+    padding: 120px 0;
+    background-color: rgba(#789868, .1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    &__content {
+        width: 100%;
+    }
+
+    iframe {
+        height: 415px;
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+}

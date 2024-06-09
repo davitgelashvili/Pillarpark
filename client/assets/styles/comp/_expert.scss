@@ -1,0 +1,50 @@
+.expert {
+    padding: 120px 0;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    &__form {
+        border: 1px solid rgba(#3F4141, 0.1);
+        border-radius: 100px;
+        padding: 8px 0;
+        box-shadow: 0px 6px 16px 0px rgba(#3F4141, 0.04);
+        
+        &--item {
+            width: calc(100% / 5);
+            padding: 0 24px;
+            border-right: 1px solid rgba(#3F4141,.05);
+        }
+
+        &--select {
+            width: 100%;
+            padding: 19px 0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            @include fontStyle(
+                rgba(#3F4141, .6),
+                14px,
+                400,
+                16px
+            )
+        }
+
+        &--btn {
+            width: calc(100% / 5);
+            background-color: #789868;
+            border-radius: 100px;
+            padding: 19px 0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin-right: 8px;
+            @include fontStyle(
+                #fff,
+                14px,
+                700,
+                16px
+            )
+        }
+    }
+}

@@ -10,9 +10,14 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
 <body>
+    <include src="./components/comm/header/header.html"></include>
     <include src="./components/home/slider.html"></include>
-    <include src="./components/home/group.html"></include>
-    <include src="./components/home/projects.html"></include>
+    <div class="main-content">
+        <include src="./components/home/group.html"></include>
+        <include src="./components/home/projects.html"></include>
+        <include src="./components/home/expert.html"></include>
+        <include src="./components/home/map.html"></include>
+    </div>
 
 
     <script>
@@ -29,9 +34,9 @@
             });
         })();
     </script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./assets/javascript/owl.carousel.min.js"></script>
-    <script src="./assets/javascript/slider.js"></script>
-    <script src="./assets/javascript/function.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/owl.carousel.min.js" defer></script>
+    <script src="./assets/javascript/slider.js" defer></script>
+    <script src="./assets/javascript/function.js" defer></script>
 </body>
 </html>

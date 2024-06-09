@@ -1,3 +1,78 @@
 .slider {
-    background-color: orange;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    &__container {
+        position: relative;
+    }
+
+    &__content {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        z-index: 0;
+    }
+        
+    &__item {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+
+        &--cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &--body {
+            padding: 80px 0;
+            position: absolute;
+            background: rgb(63,65,65);
+            background: linear-gradient(180deg, rgba(#000,0) 0%, rgba(#000,1) 100%);
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        &--title {
+            margin-bottom: 24px;
+            color: #fff;
+            font-size: 80px;
+            font-weight: 500;
+            line-height: 80px;
+        }
+
+        &--desc {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+
+    &__dots {
+        position: fixed;
+        bottom: 80px;
+        z-index: 1;
+
+        &--item {
+            width: 40px;
+            height: 56px;
+            padding: 0 6px;
+            opacity: 0.5;
+
+            &.active {
+                width: 72px;
+                opacity: 1;
+            }
+        }
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    }
 }

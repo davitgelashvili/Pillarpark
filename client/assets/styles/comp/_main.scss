@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'FiraGO', sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+.main-content {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.section-title {
+    color: #3F4141;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+@mixin  fontStyle($color, $size, $weight, $height){
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
