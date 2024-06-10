@@ -110,6 +110,7 @@
         font-size: 14px;
         line-height: 16px;
         z-index: 0;
+        opacity: .5;
     }
 
     &__field {
@@ -138,7 +139,7 @@
         padding: 7px 14px;
         margin: 8px;
         border: none;
-        border-radius: 4px;
+        border-radius: 100px;
         color: #3F4141;
         outline: none;
     }
