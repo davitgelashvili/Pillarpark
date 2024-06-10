@@ -27,10 +27,13 @@
         background-color: #fff;
         border-radius: 24px;
         padding: 24px;
+        max-height: 100%;
+        overflow: auto;
 
         @media (max-width: 767px) {
             max-width: calc(100% - 48px);
             margin-top: 100px;
+            max-height: calc(100% - 100px);
         }
 
         &--head {
@@ -72,6 +75,13 @@
             font-size: 16px;
             line-height: 18px;
             font-weight: 500;
+            cursor: pointer;
+        }
+
+        &--contact {
+            li {
+                margin: 10px !important;
+            }
         }
     }
 }
@@ -85,8 +95,24 @@
     background-color: rgba(#3F4141, 0.05);
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
 
-    input {
+    &__title {
+        position: absolute;
+        left: 15px;
+        // top: 50%;
+        top: 0;
+        transform: translate(0, 15px);
+        transform-origin: 0 0;
+        transition: transform 120ms ease-in;
+        color: #3F4141;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        z-index: 0;
+    }
+
+    &__field {
         width: 100%;
         color: #3F4141;
         font-weight: 400;
@@ -96,6 +122,15 @@
         border: none;
         outline: none;
         background-color: transparent;
+        position: relative;
+        z-index: 1;
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            & + .input__title {
+            transform: translate(0, 0px) scale(.8);
+            }
+        }
     }
 
     select {
@@ -116,3 +151,4 @@
         outline: none;
     }
 }
+
