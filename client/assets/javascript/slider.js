@@ -22,15 +22,17 @@ $(window).on("load",function() {
     })()
 
     // project slider
-    const Slider = $('.owl-carousel')
-    $('.projects__slider').owlCarousel({
+    const projectSlider = $('.projects__slider')
+    projectSlider.owlCarousel({
         loop:false,
         nav:false,
         dots: false,
         margin:40,
         responsive:{
             0:{
-                items:1
+                items:1,
+                margin: 16,
+                stagePadding: 50,
             },
             768:{
                 items:2
@@ -39,12 +41,39 @@ $(window).on("load",function() {
     })
 
     $('.owl--prev').click(function() {
-        Slider.trigger('prev.owl.carousel');
+        projectSlider.trigger('prev.owl.carousel');
     })
     
     $('.owl--next').click(function() {
-        Slider.trigger('next.owl.carousel');
+        projectSlider.trigger('next.owl.carousel');
     })
 
+
+    // news slider
+    const newsSlider = $('.news__slider')
+    newsSlider.owlCarousel({
+        loop:false,
+        nav:false,
+        dots: false,
+        margin:40,
+        responsive:{
+            0:{
+                items:2,
+                margin: 16,
+                stagePadding: 50,
+            },
+            768:{
+                items:3
+            }
+        }
+    })
+
+    $('.owl--prev').click(function() {
+        newsSlider.trigger('prev.owl.carousel');
+    })
+    
+    $('.owl--next').click(function() {
+        newsSlider.trigger('next.owl.carousel');
+    })
 
 });

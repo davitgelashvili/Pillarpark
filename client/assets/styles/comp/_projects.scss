@@ -4,35 +4,19 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
-    &__header {
-        &--view {
-            padding: 11px 32px;
-            margin-right: 32px;
-            border-right: 1px solid rgba(#3F4141,.05);
-            list-style: none;
-
-            @include fontStyle(
-                #3F4141,
-                12px,
-                500,
-                18px
-            )
-        }
-    }
-
     &__slider {
-        &--btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: none;
-            outline: none;
-            background-color: transparent;
-        }
+        // &--btn {
+        //     width: 40px;
+        //     height: 40px;
+        //     border-radius: 50%;
+        //     border: none;
+        //     outline: none;
+        //     background-color: transparent;
+        // }
 
-        &--next {
-            background-color: #fff;
-        }
+        // &--next {
+        //     background-color: #fff;
+        // }
 
         &--item {
             display: block;

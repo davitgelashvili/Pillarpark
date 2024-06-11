@@ -1,3 +1,10 @@
+@mixin  fontStyle($color, $size, $weight, $height){
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,9 +35,36 @@ body {
     margin-bottom: 60px;
 }
 
-@mixin  fontStyle($color, $size, $weight, $height){
-    color: $color;
-    font-size: $size;
-    font-weight: $weight;
-    line-height: $height;
+.section-view {
+    padding: 11px 32px;
+    margin-right: 32px;
+    border-right: 1px solid rgba(#3F4141,.05);
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        @include fontStyle(
+            #3F4141,
+            12px,
+            500,
+            18px
+        )
+    }
+
+}
+
+.section-slider {
+    &--btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+
+        &.next {
+            background-color: #fff;
+        }
+    }
+
 }
