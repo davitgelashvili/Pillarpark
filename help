@@ -1,1 +1,10 @@
 ./assets/images
+
+@media (max-width: 767px) {
+
+}
+
+
+@media (max-width: 991px) {
+    
+}

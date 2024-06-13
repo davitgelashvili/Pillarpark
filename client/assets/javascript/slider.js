@@ -32,7 +32,7 @@ $(window).on("load",function() {
             0:{
                 items:1,
                 margin: 16,
-                stagePadding: 50,
+                stagePadding: 40,
             },
             768:{
                 items:2
@@ -58,9 +58,9 @@ $(window).on("load",function() {
         margin:40,
         responsive:{
             0:{
-                items:2,
+                items:1,
                 margin: 16,
-                stagePadding: 50,
+                stagePadding: 40,
             },
             768:{
                 items:3

@@ -1,9 +1,35 @@
-// $(document).ready(function(){
-//     $('.content__form--btn').click(function(){
-//         $('.popup').css('display','flex')
-//     })
+$(window).on("load", function(){
+    const convertImages = (query, callback) => {
+        const images = document.querySelectorAll(query);
+      
+        images.forEach(image => {
+          fetch(image.src)
+          .then(res => res.text())
+          .then(data => {
+            const parser = new DOMParser();
+            const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+            if (image.id) svg.id = image.id;
+            if (image.className) svg.classList.add(image.classList);
+            
+            console.log(svg)
+            image.parentNode.replaceChild(svg, image);
+          })
+          .then(callback)
+          .catch(error => console.error(error))
+        });
+      }
+      
+      convertImages('.imgtosvg');
 
-//     $('body').on('click', '.popup--bg, .popup__content--close', function () {
-//         $('.popup').css('display','none')
-//     })
-// })
+  $('.open-menu').click(function(){
+    $('.menu').css('display','block')
+    $('body').css('overflow','hidden')
+  })
+
+  $('.close-menu').click(function(){
+    $('.menu').css('display','none')
+    $('body').css('overflow','auto')
+  })
+
+  $('.loader').remove()
+})

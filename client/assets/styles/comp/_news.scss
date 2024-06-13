@@ -4,7 +4,18 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
+    @media (max-width: 767px) {
+        padding: 48px 0;
+    }
+
     &__slider {
+        width: 100%;
+        margin-left: 0;
+
+        @media (max-width: 767px) {
+            width: calc(100% + 40px);
+            margin-left: -40px;
+        }
 
         &--cover {
             width: 100%;
@@ -22,11 +33,34 @@
         }
 
         &--title {
+            margin-bottom: 16px;
             @include fontStyle(
                 #3F4141,
                 14px,
                 600,
                 16px
+            )
+        }
+
+        &--more {
+            list-style: none;
+            opacity: .6;
+
+            img {
+                width: 6px !important;
+                margin-left: 17px;
+            }
+        }
+
+        &--link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            @include fontStyle(
+                #3F4141,
+                14px,
+                500,
+                18px
             )
         }
 

@@ -33,6 +33,10 @@
             bottom: 0;
             left: 0;
             width: 100%;
+
+            @media (max-width: 767px) {
+                padding: 135px 0;
+            }
         }
 
         &--title {
@@ -41,6 +45,11 @@
             font-size: 80px;
             font-weight: 500;
             line-height: 80px;
+
+            @media (max-width: 767px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
         }
 
         &--desc {
@@ -48,6 +57,12 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
+            opacity: .8;
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+                line-height: 18px;
+            }
         }
     }
 
@@ -55,6 +70,10 @@
         position: fixed;
         bottom: 80px;
         z-index: 1;
+
+        @media (max-width: 767px) {
+            bottom: 56px;
+        }
 
         &--item {
             width: 40px;

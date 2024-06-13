@@ -1,4 +1,66 @@
 .header {
     position: relative;
     z-index: 2;
+    
+    &__container {
+        padding: 32px 0;
+        border-bottom: 1px solid rgba(#3F4141, 0.05);
+
+        @media (max-width: 767px) {
+            padding: 20px 0;
+        }
+    }
+
+    &__order {
+        list-style: none;
+        margin-right: 32px;
+
+        &--btn {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 11px 20px;
+            background-color: #fff;
+            border-radius: 100px;
+            text-decoration: none;
+
+            @media (max-width: 767px) {
+                padding: 12px;
+                background-color: #789868;
+            }
+
+            p {
+                margin: 0;
+                margin-left: 8px;
+                @include fontStyle(
+                    #3F4141,
+                    14px,
+                    500,
+                    18px
+                );
+            }
+            @media (max-width: 767px){
+                path {
+                    fill: #fff
+                }
+            }
+        }
+        
+    }
+
+    &__lang {
+        margin-right: 32px;
+        @include fontStyle(
+            #fff,
+            16px,
+            500,
+            18px
+        );
+    }
+
+    &__burger {
+        background-color: transparent;
+        outline: none;
+        border: none;
+    }
 }

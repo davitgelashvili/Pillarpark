@@ -25,14 +25,24 @@ body {
 }
 
 .section-title {
+    margin: 0;
     color: #3F4141;
     font-weight: 700;
     font-size: 32px;
     line-height: 41px;
+
+    @media (max-width: 767px) {
+        font-size: 24px;
+        line-height: 31px;
+    }
 }
 
 .section-header {
     margin-bottom: 60px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 40px;
+    }
 }
 
 .section-view {
@@ -40,6 +50,12 @@ body {
     margin-right: 32px;
     border-right: 1px solid rgba(#3F4141,.05);
     list-style: none;
+
+    @media (max-width: 767px) {
+        padding: 0;
+        margin-right: 0;
+        border-right: none;
+    }
 
     a {
         text-decoration: none;
@@ -61,10 +77,80 @@ body {
         border: none;
         outline: none;
         background-color: transparent;
+        opacity: .5;
 
         &.next {
             background-color: #fff;
+            opacity: 1;
         }
     }
 
+}
+
+
+
+.input {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(#3F4141, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+
+    &__title {
+        position: absolute;
+        left: 15px;
+        // top: 50%;
+        top: 0;
+        transform: translate(0, 15px);
+        transform-origin: 0 0;
+        transition: transform 120ms ease-in;
+        color: #3F4141;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        z-index: 0;
+        opacity: .5;
+    }
+
+    &__field {
+        width: 100%;
+        color: #3F4141;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 15px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        position: relative;
+        z-index: 1;
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            & + .input__title {
+            transform: translate(0, 0px) scale(.8);
+            }
+        }
+    }
+
+    select {
+        background-color: rgba(#3F4141, 0.05);
+        padding: 7px 14px;
+        margin: 8px;
+        border: none;
+        border-radius: 100px;
+        color: #3F4141;
+        outline: none;
+    }
+
+    textarea {
+        background-color: transparent;
+        width: 100%;
+        padding: 15px;
+        border: none;
+        outline: none;
+    }
 }

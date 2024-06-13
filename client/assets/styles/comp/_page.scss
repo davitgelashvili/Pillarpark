@@ -1,0 +1,29 @@
+body.page {
+    .header{
+        background-color: rgba(#789868, .1);
+
+        &__order {
+            &--btn {
+                background-color: #789868;
+
+                p {
+                    color: #fff;
+                }
+
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+
+        &__lang {
+            color: #3F4141;
+        }
+
+        &__burger {
+            path {
+                fill: #3F4141;
+            }
+        }
+    }
+}
