@@ -26,4 +26,34 @@ body.page {
             }
         }
     }
+
+    &__detail {
+        .header {
+            background-color: #fff;
+
+            &__order {
+                &--btn {
+                    background-color: #789868;
+    
+                    p {
+                        color: #fff;
+                    }
+    
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+
+            &__lang {
+                color: #3F4141;
+            }
+    
+            &__burger {
+                path {
+                    fill: #3F4141;
+                }
+            }
+        }
+    }
 }

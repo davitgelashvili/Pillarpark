@@ -1,0 +1,22 @@
+.livecamera {
+    display: block;
+
+    & .news {
+        &__item {
+            @media (max-width: 767px) {
+                margin-bottom: 16px;
+                padding: 16px;
+                border-radius: 16px;
+                border: 1px solid rgba(#3F4141, 0.05)
+            }
+
+            &--cover {
+                height: 388px;
+
+                @media (max-width: 767px) {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
