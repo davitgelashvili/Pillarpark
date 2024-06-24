@@ -76,4 +76,32 @@ $(window).on("load",function() {
         newsSlider.trigger('next.owl.carousel');
     })
 
+
+
+    // news slider
+    const projectDetailGallery = $('.detail__gallery--slider')
+    projectDetailGallery.owlCarousel({
+        loop:false,
+        nav:false,
+        dots: false,
+        margin:40,
+        stagePadding: 80,
+        responsive:{
+            0:{
+                items:1,
+                margin: 16,
+            },
+            768:{
+                items:2
+            }
+        }
+    })
+
+    $('.owl--prev').click(function() {
+        projectDetailGallery.trigger('prev.owl.carousel');
+    })
+    
+    $('.owl--next').click(function() {
+        projectDetailGallery.trigger('next.owl.carousel');
+    })
 });
