@@ -111,6 +111,12 @@ body {
   background-color: #fff;
 }
 
+@media (min-width: 991px) {
+  .container,
+  .container-md {
+    max-width: 1110px;
+  }
+}
 .main-content {
   position: relative;
   z-index: 2;
@@ -248,6 +254,16 @@ body {
   padding: 15px;
   border: none;
   outline: none;
+}
+
+.disable::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -409,9 +425,9 @@ body {
 .group__body {
   padding: 148px 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .group__body {
-    padding: 20px 0;
+    padding: 45px 0;
   }
 }
 .group__body--title {
@@ -458,6 +474,18 @@ body {
   font-size: 14px;
   line-height: 18px;
   opacity: 0.6;
+}
+.group__cover {
+  width: 289.35px;
+  height: 400px;
+  margin-top: 160px;
+}
+@media (max-width: 991px) {
+  .group__cover {
+    width: 146.12px;
+    height: 202px;
+    margin-top: 45px;
+  }
 }
 
 .projects__section {
@@ -704,12 +732,12 @@ body {
 }
 .projects .detail__gallery {
   padding: 120px 0;
+  overflow: hidden;
 }
 .projects .detail__gallery--slider-out {
   height: 414px;
   position: relative;
-  margin-left: -80px;
-  margin-right: -80px;
+  margin-left: -40px;
 }
 .projects .detail__gallery--slider-in {
   width: 100vw;
@@ -1318,4 +1346,245 @@ body {
   .livecamera .news__item--cover {
     height: 200px;
   }
+}
+
+.conditions {
+  padding: 120px 0;
+  background-color: rgba(120, 152, 104, 0.1);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+.conditions__title {
+  margin-bottom: 24px;
+}
+.conditions__body {
+  color: #3F4141;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.conditions__body p {
+  opacity: 0.84;
+  margin: 0;
+}
+.conditions__cover {
+  width: 344px;
+  height: 331px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .conditions__cover {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .conditions__cover {
+    margin-top: 24px;
+  }
+}
+.conditions__cover--img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.selectfloor {
+  display: block;
+}
+@media (min-width: 768px) {
+  .selectfloor .page-header {
+    margin: 0;
+  }
+}
+.selectfloor__area {
+  width: 100%;
+  position: relative;
+}
+.selectfloor__area--cover {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.selectfloor__area a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.selectfloor__area svg polygon {
+  position: relative;
+  cursor: pointer;
+  fill: transparent;
+}
+.selectfloor__area svg polygon:hover {
+  fill: #789868;
+  opacity: 0.6;
+}
+
+.m-select-floor__container {
+  background-color: #fff;
+  box-shadow: 0px 6px 16px 0px rgba(63, 65, 65, 0.04);
+  border: 1px solid rgba(63, 65, 65, 0.1);
+  border-radius: 16px;
+  padding: 20px 0;
+}
+.m-select-floor li {
+  list-style: none;
+}
+.m-select-floor li.disable {
+  opacity: 0.3;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.m-select-floor li a {
+  padding: 8px 0;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #3F4141;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.selecthouse {
+  display: block;
+}
+.selecthouse__selectarea {
+  margin-left: 24px;
+}
+.selecthouse__selectarea--title {
+  margin: 0;
+  margin-right: 8px;
+  color: rgba(63, 65, 65, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.selecthouse__selectarea--select {
+  cursor: pointer;
+  padding-right: 8px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #3F4141;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.selecthouse__selectarea--option {
+  color: rgba(63, 65, 65, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.selecthouse__area {
+  width: 100%;
+  position: relative;
+}
+.selecthouse__area--cover {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.selecthouse__area a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.selecthouse__area--svg {
+  position: relative;
+}
+.selecthouse__area--polygon {
+  position: relative;
+  cursor: pointer;
+  fill: transparent;
+  z-index: 2;
+  opacity: 0.6;
+}
+.selecthouse__area--polygon:hover {
+  fill: #789868;
+}
+.selecthouse__area--polygon:hover .selecthouse__area--textarea,
+.selecthouse__area--polygon:hover .selecthouse__area--text {
+  display: block !important;
+}
+.selecthouse__area--polygon.sold {
+  fill: url(https://archi.ge/images/sold.png);
+}
+.selecthouse__area--polygon.filled {
+  fill: #ff0000;
+}
+.selecthouse__area--textarea {
+  display: none;
+  fill: #789868;
+  opacity: 0.8;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+.selecthouse__area--textarea.sold {
+  fill: #000;
+  display: block;
+}
+.selecthouse__area--textarea.filled {
+  fill: #ff0000;
+  display: block;
+}
+.selecthouse__area--text {
+  display: none;
+  fill: #fff;
+  font-size: 20.08px;
+  white-space: unset;
+}
+.selecthouse__area--text.sold {
+  display: block;
+}
+.selecthouse__area--text.filled {
+  display: block;
+}
+
+.house__otherhouse {
+  padding: 120px 0;
+  background-color: rgba(120, 152, 104, 0.1);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+.house__otherhouse--item {
+  padding: 0;
+  border: none;
+}
+.house__otherhouse--cover {
+  background-color: #fff;
+}
+.house__otherhouse--body {
+  margin: 0;
+}
+.house__otherhouse--link {
+  text-decoration: none;
+  color: #3F4141;
+}
+.house__otherhouse--desc {
+  margin: 0;
+  padding: 0;
+}
+.house__otherhouse--desc li {
+  margin-top: 8px;
+  list-style: none;
+  color: rgba(63, 65, 65, 0.64);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+}
+.house__cover {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 6px 16px 0px rgba(63, 65, 65, 0.04);
+  border: 1px solid rgba(63, 65, 65, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.house__cover--img {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */

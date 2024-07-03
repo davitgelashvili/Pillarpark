@@ -6,8 +6,8 @@
     &__body {
         padding: 148px 0;
 
-        @media (max-width: 767px) {
-            padding: 20px 0;
+        @media (max-width: 991px) {
+            padding: 45px 0;
         }
 
         &--title {
@@ -59,6 +59,18 @@
             font-size: 14px;
             line-height: 18px;
             opacity: 0.6;
+        }
+    }
+
+    &__cover {
+        width: 289.35px;
+        height: 400px;
+        margin-top: 160px;
+
+        @media (max-width: 991px) {
+            width: 146.12px;
+            height: 202px;
+            margin-top: 45px;
         }
     }
 }

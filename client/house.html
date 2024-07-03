@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILLARPARK</title>
+    <link rel="stylesheet" href="./assets/styles/bootstrap.min.css">
+    <link href="https://free.bboxtype.com/embedfonts/?family=FiraGO:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body class="page">
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="index.html" class="header__logo">
+                            <img src="./assets/images/logo_green.png" class="imgtosvg" />
+                        </a>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-items-center">
+                        <li class="header__order">
+                            <a href="ordercall.html" class="header__order--btn d-flex align-items-center">
+                                <img src="./assets/images/order_icon.svg" class="imgtosvg"/>
+                                <p class="d-none d-md-block">შეუკვეთე ზარი</p>
+                            </a>
+                        </li>
+                        <div class="header__lang">
+                            ENG
+                        </div>
+                        <button class="header__burger open-menu">
+                            <img src="./assets/images/burger.svg" class="imgtosvg" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-content">
+        <include src="./components/house/house.html"></include>
+        <include src="./components/house/otherhouse.html"></include>
+        <include src="./components/selectfloor/selectfloor-mobile.html"></include>
+        <include src="./components/main/expert.html"></include>
+        <include src="./components/comm/footer/footer.html"></include>
+    </div>
+
+    <include src="./components/comm/menu.html"></include>
+    <include src="./components/comm/loader.html"></include>
+
+    <script>
+        (() => {
+            const includes = document.getElementsByTagName('include');
+            [].forEach.call(includes, i => {
+                let filePath = i.getAttribute('src');
+                fetch(filePath).then(file => {
+                    file.text().then(content => {
+                        i.insertAdjacentHTML('afterend', content);
+                        i.remove();
+                    });
+                });
+            });
+        })();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/owl.carousel.min.js" defer></script>
+    <script src="./assets/javascript/slider.js" defer></script>
+    <script src="./assets/javascript/function.js" defer></script>
+</body>
+</html>

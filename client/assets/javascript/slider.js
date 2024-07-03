@@ -76,23 +76,21 @@ $(window).on("load",function() {
         newsSlider.trigger('next.owl.carousel');
     })
 
-
-
-    // news slider
+    // projects slider which is project detail on page
     const projectDetailGallery = $('.detail__gallery--slider')
     projectDetailGallery.owlCarousel({
         loop:false,
         nav:false,
         dots: false,
         margin:40,
-        stagePadding: 80,
+        stagePadding: 40,
         responsive:{
             0:{
                 items:1,
                 margin: 16,
             },
             768:{
-                items:2
+                items:3
             }
         }
     })
@@ -103,5 +101,32 @@ $(window).on("load",function() {
     
     $('.owl--next').click(function() {
         projectDetailGallery.trigger('next.owl.carousel');
+    })
+
+    // other house slider which is houme detail on page
+    const othersHouse = $('.house__otherhouse--slider')
+    othersHouse.owlCarousel({
+        loop:false,
+        nav:false,
+        dots: false,
+        margin:40,
+        responsive:{
+            0:{
+                items:1,
+                margin: 16,
+                stagePadding: 40,
+            },
+            768:{
+                items:3
+            }
+        }
+    })
+
+    $('.owl--prev').click(function() {
+        othersHouse.trigger('prev.owl.carousel');
+    })
+    
+    $('.owl--next').click(function() {
+        othersHouse.trigger('next.owl.carousel');
     })
 });

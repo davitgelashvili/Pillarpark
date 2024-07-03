@@ -1,0 +1,44 @@
+.conditions {
+    padding: 120px 0;
+    background-color: rgba(#789868, 0.1);
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__body {
+        @include fontStyle(
+            #3F4141,
+            16px,
+            400,
+            20px
+        );
+        p {
+            opacity: 0.84;
+            margin: 0;
+        }
+    }
+
+    &__cover {
+        width: 344px;
+        height: 331px;
+        border-radius: 16px;
+        overflow: hidden;
+
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 24px;
+        }
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

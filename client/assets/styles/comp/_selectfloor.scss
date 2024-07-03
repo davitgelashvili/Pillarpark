@@ -1,0 +1,75 @@
+.selectfloor {
+    display: block;
+
+    @media (min-width: 768px) {
+        .page-header {
+            margin: 0;
+        }
+    }
+
+    &__area {
+        width: 100%;
+        position: relative;
+
+        &--cover {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        svg {
+            polygon {
+                position: relative;
+                cursor: pointer;
+                fill: transparent;
+            
+                &:hover {
+                    fill: #789868;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+.m-select-floor {
+
+    &__container {
+        background-color: #fff;
+        box-shadow: 0px 6px 16px 0px rgba(#3F4141, 0.04);
+        border: 1px solid rgba(#3F4141, 0.1);
+        border-radius: 16px;
+        padding: 20px 0;
+    }
+
+    li {
+        list-style: none;
+        
+        &.disable {
+            opacity: 0.3;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            padding: 8px 0;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            @include fontStyle(
+                #3F4141,
+                24px,
+                600,
+                32px
+            );
+        }
+    }
+}

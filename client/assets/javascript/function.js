@@ -32,4 +32,10 @@ $(window).on("load", function(){
   })
 
   $('.loader').remove()
+  
+  $('.selectfloor__area--floor').click(function(){
+    window.location.pathname = `/client/${$(this).data('href')}.html`;
+  })
+
+  $('.my-select').selectpicker();
 })

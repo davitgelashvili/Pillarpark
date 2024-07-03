@@ -16,6 +16,13 @@ body {
     background-color: #fff;
 }
 
+@media (min-width: 991px) {
+    .container,
+    .container-md {
+        max-width: 1110px;
+    }
+}
+
 .main-content {
     position: relative;
     z-index: 2;
@@ -165,5 +172,17 @@ body {
         padding: 15px;
         border: none;
         outline: none;
+    }
+}
+
+.disable {
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
     }
 }

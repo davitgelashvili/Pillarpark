@@ -290,12 +290,13 @@
 
         &__gallery {
             padding: 120px 0;
+            overflow: hidden;
             
             &--slider-out {
                 height: 414px;
                 position: relative;
-                margin-left: -80px;
-                margin-right: -80px;
+                margin-left: -40px;
+                // margin-right: -40px;
             }
             &--slider-in {
                 width: 100vw;

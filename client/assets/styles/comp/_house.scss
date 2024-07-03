@@ -1,0 +1,53 @@
+.house {
+    &__otherhouse {
+        padding: 120px 0;
+        background-color: rgba(#789868, 0.1);
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+
+        &--item {
+            padding: 0;
+            border: none
+        }
+
+        &--cover {
+            background-color: #fff;
+        }
+
+        &--body {
+            margin: 0;
+        }
+
+        &--link {
+            text-decoration: none;
+            color: #3F4141;
+        }
+
+        &--desc {
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-top: 8px;
+                list-style: none;
+                color: rgba(#3F4141, 0.64);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18.2px;
+            }
+        }
+    }
+
+    &__cover {
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0px 6px 16px 0px rgba(#3F4141, 0.04);
+        border: 1px solid rgba(#3F4141, 0.1);
+        border-radius: 16px;
+        overflow: hidden;
+
+        &--img {
+            display: block;
+        }
+    }
+}

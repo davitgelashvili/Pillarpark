@@ -1,0 +1,116 @@
+.selecthouse {
+    display: block;
+
+    &__selectarea {
+        margin-left: 24px;
+
+        &--title {
+            margin: 0;
+            margin-right: 8px;
+            color: rgba(#3F4141, 0.6);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &--select {
+            cursor: pointer;
+            padding-right: 8px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #3F4141;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    
+        &--option {
+            color: rgba(#3F4141, 0.6);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    &__area {
+        width: 100%;
+        position: relative;
+
+        &--cover {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        &--svg {
+            position: relative;
+        }
+
+        &--polygon{
+            position: relative;
+            cursor: pointer;
+            fill: transparent;
+            z-index: 2;
+            opacity: 0.6;
+        
+            &:hover {
+                fill: #789868;
+
+                .selecthouse__area--textarea,
+                .selecthouse__area--text {
+                    display: block !important
+                }
+            }
+            
+            &.sold {
+                fill: url(https://archi.ge/images/sold.png);
+            }
+
+            &.filled {
+                fill: #ff0000;
+            }
+        }
+
+        &--textarea {
+            display: none;
+            fill: #789868;
+            opacity: .8;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+
+            &.sold {
+                fill: #000;
+                display: block;
+            }
+
+            &.filled {
+                fill: #ff0000;
+                display: block;
+            }
+        }
+
+        &--text {
+            display: none;
+            fill: #fff;
+            font-size: 20.08px;
+            white-space: unset;
+
+            &.sold {
+                display: block;
+            }
+
+            &.filled {
+                display: block;
+            }
+        }
+    }
+}
+
