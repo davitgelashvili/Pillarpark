@@ -10,10 +10,11 @@
         background-color: rgba(63, 65, 65, 0.05);
         border: none;
         border-radius: 100px;
-        cursor: pointer;
+        text-decoration: none;
     }
 
     &--flag {
+        width: 16px;
         margin-right: 10px;
     }
 
@@ -22,6 +23,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
+        margin: 0;
 
         @media (max-width: 767px) {
             display: none;

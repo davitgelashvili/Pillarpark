@@ -1,7 +1,7 @@
 .menu {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 200vh;
     top: 0;
     right: 0;
     z-index: 2;
@@ -24,7 +24,7 @@
         
         &--bg {
             width: 100vw;
-            height: 100%;
+            height: 200vh;
             background-color: #fff;
             position: absolute;
             z-index: -1;
