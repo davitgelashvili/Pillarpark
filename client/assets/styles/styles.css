@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .loader {
   position: fixed;
   z-index: 9;
@@ -1546,6 +1547,7 @@ body {
 }
 
 .house__otherhouse {
+  margin-top: 64px;
   padding: 120px 0;
   background-color: rgba(120, 152, 104, 0.1);
   border-top-left-radius: 32px;
@@ -1578,6 +1580,7 @@ body {
   line-height: 18.2px;
 }
 .house__cover {
+  padding: 35px 26px;
   margin-bottom: 29px;
   position: relative;
   background-color: #fff;
@@ -1596,6 +1599,8 @@ body {
   display: block;
 }
 .house__body {
+  display: flex;
+  flex-direction: column;
   padding: 24px;
   background-color: #fff;
   border: 1px solid rgba(63, 65, 65, 0.1);
@@ -1608,9 +1613,125 @@ body {
   border-radius: 50%;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .house__location {
+    width: 62px;
+    height: 62px;
+  }
+}
 .house__location--img {
   width: 100%;
   height: 100%;
+}
+.house__title {
+  margin-bottom: 16px;
+  color: #3F4141;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.house__info {
+  color: rgba(63, 65, 65, 0.5);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  margin: 0;
+  padding: 0;
+}
+.house__info li {
+  margin-bottom: 8px;
+  list-style: none;
+}
+.house__info span {
+  color: #3F4141;
+  font-weight: 600;
+}
+.house__price {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: rgba(120, 152, 104, 0.05);
+  border-radius: 12px;
+}
+.house__price .switch {
+  margin-left: 39px;
+  height: 24px;
+  background-color: #fff;
+}
+.house__price .switch__slider {
+  z-index: 2;
+}
+.house__price .switch__text {
+  width: 22px;
+  height: 22px;
+  color: #3F4141;
+}
+.house__price .switch__slider:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "$";
+  width: 22px;
+  height: 22px;
+  top: 1px;
+  left: 1px;
+  color: #fff;
+}
+.house__price .switch__input:checked + .switch__slider:before {
+  transform: translateX(22px);
+  content: "₾";
+}
+.house__price--text {
+  margin: 0;
+  margin-top: 12px;
+  padding: 0;
+}
+.house__download {
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+}
+.house__download--item {
+  margin-bottom: 20px;
+  list-style: none;
+}
+.house__download--title {
+  margin: 0;
+  color: #3F4141;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+.house__download--link {
+  text-decoration: none;
+  display: block;
+}
+.house__download--icon {
+  margin-left: 16px;
+}
+.house__contact {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+  border-top: 1px solid rgba(63, 65, 65, 0.05);
+  border-bottom: 1px solid rgba(63, 65, 65, 0.05);
+}
+.house__contact--item {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.house__contact--link {
+  color: #3F4141;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  text-align: left;
+  text-decoration: none;
+}
+.house__contact--icon {
+  margin-right: 16px;
+}
+.house__gegma {
+  width: 100%;
 }
 
 .switch {

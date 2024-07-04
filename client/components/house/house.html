@@ -6,7 +6,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-7">
+            <div class="col-md-7">
                 <div class="house__cover d-flex align-items-center justify-content-center">
                     <div class="house__cover--change">
                         <label class="switch">
@@ -22,19 +22,79 @@
                     </div>
                     <img src="./assets/images/home.png" class="house__cover--img"/>
                 </div>
-                <div class="house__location">
+                <div class="house__location d-none d-md-block">
                     <img src="./assets/images/house_location.png" class="house__location--img"/>
                 </div>
             </div>
-            <div class="col-5">
-                <div class="house__body">
-                    <h1 class="projects__item--title">ბინა 10</h1>
-                    <ul class="house__otherhouse--desc">
-                        <li>ბლოკი: A</li>
-                        <li>სართული: 24</li>
-                        <li>საერთო ფართი: 80მ2</li>
-                        <li>ფასი: $104,422 ($105/მ2)</li>
+            <div class="col-md-5">
+                <div class="house__body align-items-md-start">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h1 class="house__title">ბინა 10</h1>
+                            <ul class="house__info">
+                                <li>საერთო ფართი <span>105მ<sup>2</sup></span></li>
+                                <li>საცხოვრებელი ფართი <span>87მ<sup>2</sup></span></li>
+                                <li>საგაზაფხულო ფართი: <span>21მ<sup>2</sup></span></li>
+                            </ul>
+                        </div>
+                        <div class="house__location d-block d-md-none">
+                            <img src="./assets/images/house_location.png" class="house__location--img"/>
+                        </div>
+                    </div>
+                    <div class="house__price">
+                        <div class="d-flex align-items-center">
+                            ფასი
+                            <div>
+                                <label class="switch">
+                                    <input class="switch__input" type="checkbox">
+                                    <span class="switch__slider switch__round"></span>
+                                    <span class="switch__text">
+                                        $
+                                    </span>
+                                    <span class="switch__text">
+                                        ₾
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <p class="house__price--text">
+                            $104,422.00
+                        </p>
+                    </div>
+                    <ul class="house__download">
+                        <li class="house__download--item d-flex align-items-center">
+                            <p class="house__download--title">ჩამოტვირთე გეგმა</p>
+                            <a href="" class="house__download--link">
+                                <img src="./assets/images/download.svg" class="house__download--icon"/>
+                            </a>
+                        </li>
+                        <li class="house__download--item d-flex align-items-center">
+                            <p class="house__download--title">გაზიარება:</p>
+                            <a href="" class="house__download--link">
+                                <img src="./assets/images/fb.svg" class="house__download--icon"/>
+                            </a>
+                            <a href="" class="house__download--link">
+                                <img src="./assets/images/tw.svg" class="house__download--icon"/>
+                            </a>
+                        </li>
                     </ul>
+                    <ul class="house__contact">
+                        <li class="house__contact--item">
+                            <a href="" class="house__contact--link">
+                                <img src="./assets/images/call.svg" class="house__contact--icon"/>
+                                (032) 2-100-100
+                            </a>
+                        </li>
+                        <li class="house__contact--item">
+                            <a href="" class="house__contact--link">
+                                <img src="./assets/images/mail.svg" class="house__contact--icon"/>
+                                info@pillarpark.ge
+                            </a>
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="./assets/images/gegma.png" class="house__gegma"/>
+                    </div>
                 </div>
             </div>
         </div>
