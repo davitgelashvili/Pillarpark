@@ -15,13 +15,27 @@
 body {
     background-color: #fff;
 }
-
-@media (min-width: 991px) {
+@media (min-width: 1360px) {
     .container,
     .container-md {
         max-width: 1110px;
     }
 }
+
+@media (max-width:1359px) and (min-width:1200px) {
+    .container,
+    .container-md {
+        max-width: 994px;
+    }
+}
+
+@media (max-width:1199px) and (min-width:991px) {
+    .container,
+    .container-md {
+        max-width: 804px;
+    }
+}
+
 
 .main-content {
     position: relative;
@@ -101,12 +115,22 @@ body {
 }
 
 .page-title {
+    margin: 0;
     @include fontStyle(
         #3F4141,
-        32px,
+        24px,
         700,
-        39px
-    )
+        29px
+    );
+
+    @media (max-width: 767px) {
+        @include fontStyle(
+            #3F4141,
+            32px,
+            700,
+            39px
+        )
+    }
 }
 
 .input {
