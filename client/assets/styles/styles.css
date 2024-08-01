@@ -1707,8 +1707,16 @@ body {
   z-index: 1;
 }
 .house__cover--img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   height: 400px;
+}
+@media (max-width: 991px) {
+  .house__cover--img {
+    height: auto;
+  }
 }
 .house__body {
   display: flex;

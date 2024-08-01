@@ -147,8 +147,14 @@
         }
 
         &--img {
+            max-width: 100%;
+            object-fit: contain;
             display: block;
             height: 400px;
+
+            @media (max-width: 991px) {
+                height: auto;
+            }
         }
     }
 
