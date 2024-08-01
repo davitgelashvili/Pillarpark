@@ -118,18 +118,6 @@ body {
     max-width: 1110px;
   }
 }
-@media (max-width: 1359px) and (min-width: 1200px) {
-  .container,
-  .container-md {
-    max-width: 994px;
-  }
-}
-@media (max-width: 1199px) and (min-width: 991px) {
-  .container,
-  .container-md {
-    max-width: 804px;
-  }
-}
 .main-content {
   position: relative;
   z-index: 2;
@@ -1621,12 +1609,9 @@ body {
   line-height: 18.2px;
 }
 .house__floors {
-  height: 100%;
-  position: absolute;
-  right: calc(100% + 57px);
-  top: 0;
   padding: 0;
   margin: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1687,6 +1672,7 @@ body {
   margin-top: 8px;
 }
 .house__cover {
+  width: 100%;
   padding: 35px 26px;
   margin-bottom: 29px;
   position: relative;
@@ -1694,11 +1680,6 @@ body {
   box-shadow: 0px 6px 16px 0px rgba(63, 65, 65, 0.04);
   border: 1px solid rgba(63, 65, 65, 0.1);
   border-radius: 16px;
-}
-@media (max-width: 991px) and (min-width: 767px) {
-  .house__cover {
-    width: 90%;
-  }
 }
 .house__cover--change {
   position: absolute;
