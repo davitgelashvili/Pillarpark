@@ -52,63 +52,35 @@
 
         &--svg {
             position: relative;
-        }
 
-        &--polygon{
-            position: relative;
-            cursor: pointer;
-            fill: transparent;
-            z-index: 2;
-            opacity: 0.6;
-        
-            &:hover {
-                fill: #789868;
+            .sold {
+                fill: rgba(#49494A, .7);
+            }
 
-                .selecthouse__area--textarea,
-                .selecthouse__area--text {
-                    display: block !important
+            .reserv {
+                fill: rgba(#C48063, .8);
+            }
+
+            polygon {
+                fill: transparent;
+
+                &:hover {
+                    cursor: pointer;
+                    fill: #719066;
+                    opacity: .7;
                 }
-            }
-            
-            &.sold {
-                fill: url(https://archi.ge/images/sold.png);
-            }
 
-            &.filled {
-                fill: #ff0000;
-            }
-        }
+                &.sold {
+                    fill: url(#sold_image);
+                    opacity: 1;
+                    cursor: auto;
+                }
 
-        &--textarea {
-            display: none;
-            fill: #789868;
-            opacity: .8;
-            stroke: #fff;
-            stroke-miterlimit: 10;
-
-            &.sold {
-                fill: #000;
-                display: block;
-            }
-
-            &.filled {
-                fill: #ff0000;
-                display: block;
-            }
-        }
-
-        &--text {
-            display: none;
-            fill: #fff;
-            font-size: 20.08px;
-            white-space: unset;
-
-            &.sold {
-                display: block;
-            }
-
-            &.filled {
-                display: block;
+                &.reserv {
+                    fill: url(#reserv_image);
+                    opacity: 1;
+                    cursor: auto;
+                }
             }
         }
     }

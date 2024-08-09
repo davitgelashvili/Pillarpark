@@ -1512,52 +1512,29 @@ body {
 .selecthouse__area--svg {
   position: relative;
 }
-.selecthouse__area--polygon {
-  position: relative;
-  cursor: pointer;
+.selecthouse__area--svg .sold {
+  fill: rgba(73, 73, 74, 0.7);
+}
+.selecthouse__area--svg .reserv {
+  fill: rgba(196, 128, 99, 0.8);
+}
+.selecthouse__area--svg polygon {
   fill: transparent;
-  z-index: 2;
-  opacity: 0.6;
 }
-.selecthouse__area--polygon:hover {
-  fill: #789868;
+.selecthouse__area--svg polygon:hover {
+  cursor: pointer;
+  fill: #719066;
+  opacity: 0.7;
 }
-.selecthouse__area--polygon:hover .selecthouse__area--textarea,
-.selecthouse__area--polygon:hover .selecthouse__area--text {
-  display: block !important;
+.selecthouse__area--svg polygon.sold {
+  fill: url(#sold_image);
+  opacity: 1;
+  cursor: auto;
 }
-.selecthouse__area--polygon.sold {
-  fill: url(https://archi.ge/images/sold.png);
-}
-.selecthouse__area--polygon.filled {
-  fill: #ff0000;
-}
-.selecthouse__area--textarea {
-  display: none;
-  fill: #789868;
-  opacity: 0.8;
-  stroke: #fff;
-  stroke-miterlimit: 10;
-}
-.selecthouse__area--textarea.sold {
-  fill: #000;
-  display: block;
-}
-.selecthouse__area--textarea.filled {
-  fill: #ff0000;
-  display: block;
-}
-.selecthouse__area--text {
-  display: none;
-  fill: #fff;
-  font-size: 20.08px;
-  white-space: unset;
-}
-.selecthouse__area--text.sold {
-  display: block;
-}
-.selecthouse__area--text.filled {
-  display: block;
+.selecthouse__area--svg polygon.reserv {
+  fill: url(#reserv_image);
+  opacity: 1;
+  cursor: auto;
 }
 
 .house__otherhouse {
