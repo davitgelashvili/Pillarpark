@@ -299,12 +299,12 @@
             &--slider-out {
                 height: 414px;
                 position: relative;
-                margin-left: -40px;
+                // margin-left: -40px;
                 // margin-right: -40px;
             }
             &--slider-in {
-                width: 100vw;
-                position: absolute;
+                width: 100%;
+                position: relative;
                 left: 0;
             }
 

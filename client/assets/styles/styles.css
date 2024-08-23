@@ -786,11 +786,10 @@ body {
 .projects .detail__gallery--slider-out {
   height: 414px;
   position: relative;
-  margin-left: -40px;
 }
 .projects .detail__gallery--slider-in {
-  width: 100vw;
-  position: absolute;
+  width: 100%;
+  position: relative;
   left: 0;
 }
 .projects .detail__gallery--item {

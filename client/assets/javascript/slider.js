@@ -83,7 +83,7 @@ $(window).on("load",function() {
         nav:false,
         dots: false,
         margin:40,
-        stagePadding: 40,
+        // stagePadding: 40,
         responsive:{
             0:{
                 items:1,
