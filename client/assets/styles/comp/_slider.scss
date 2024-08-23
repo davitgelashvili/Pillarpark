@@ -26,10 +26,10 @@
         }
 
         &--body {
-            padding: 80px 0;
+            padding: 140px 0;
             position: absolute;
             background: rgb(63,65,65);
-            background: linear-gradient(180deg, rgba(#000,0) 0%, rgba(#000,1) 100%);
+            background: linear-gradient(180deg, rgba(#000,0) 0%, rgba(#000,0.8) 100%);
             bottom: 0;
             left: 0;
             width: 100%;
@@ -45,6 +45,7 @@
             font-size: 80px;
             font-weight: 500;
             line-height: 80px;
+            width: max-content;
 
             @media (max-width: 767px) {
                 font-size: 40px;
@@ -58,6 +59,9 @@
             font-weight: 400;
             line-height: 20px;
             opacity: .8;
+            max-width: 370px;
+            width: 100%;
+            // white-space: break-spaces;
 
             @media (max-width: 767px) {
                 font-size: 14px;
@@ -68,7 +72,9 @@
 
     &__dots {
         position: fixed;
-        bottom: 80px;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 1;
 
         @media (max-width: 767px) {
@@ -76,13 +82,14 @@
         }
 
         &--item {
-            width: 40px;
-            height: 56px;
-            padding: 0 6px;
+            width: 14px;
+            height: 14px;
             opacity: 0.5;
+            background-color: #789868;
+            border-radius: 50%;
+            margin: 0 4px;
 
             &.active {
-                width: 72px;
                 opacity: 1;
             }
         }

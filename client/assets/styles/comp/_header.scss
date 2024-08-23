@@ -63,4 +63,13 @@
         outline: none;
         border: none;
     }
+
+    &__logo {
+        width: 118.98px;
+        display: block;
+
+        img {
+            width: 100%;
+        }
+    }
 }

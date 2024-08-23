@@ -73,3 +73,17 @@
         }
     }
 }
+
+.select-floor {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    font-size: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--text {
+        font-size: 14px;
+        color: #fff;
+    }
+}

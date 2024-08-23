@@ -15,12 +15,40 @@
 body {
     background-color: #fff;
 }
-@media (min-width: 1360px) {
-    .container,
-    .container-md {
-        max-width: 1110px;
+
+
+@media (min-width: 0) {
+    .pl-container {
+        max-width: 100%;
     }
 }
+
+
+@media (max-width: 1024px) {
+    .pl-container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pl-container {
+        max-width: calc(100% - 100px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .pl-container {
+        max-width: calc(100% - 150px);
+    }
+}
+
+@media (min-width: 1440px) {
+    .pl-container {
+        max-width: calc(100% - 200px);
+    }
+}
+
 
 // @media (max-width:1359px) and (min-width:1200px) {
 //     .container,
