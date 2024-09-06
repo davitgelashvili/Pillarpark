@@ -33,12 +33,8 @@ $(window).on("load", function(){
 
   $('.loader').remove()
 
-  $('.selecthouse__area--floor.active').click(function(){
-    window.location.pathname = `/client/${$(this).data('href')}`;
-  })
-
   $('.selectfloor__area--floor').click(function(){
-    window.location.pathname = `/client/${$(this).data('href')}`;
+    window.location.pathname = `${$(this).data('href')}`;
   })
 
   $('.selectfloor__area--floor').on("mouseover", function(){ 
@@ -55,7 +51,7 @@ $(window).on("load", function(){
 
 
   $('.selection__cover--block').click(function(){
-    window.location.pathname = `/client/${$(this).data('href')}`;
+    window.location.pathname = `${$(this).data('href')}`;
   })
 
   $('.selection__cover--block').on("mouseover", function(){ 
@@ -69,6 +65,19 @@ $(window).on("load", function(){
 
   $('.selection__cover--block').on("mouseout", function(){ 
     $('.selection__cover--text').hide()
+  })
+
+  $('.selecthouse__area--floor.active').click(function(){
+    window.location.pathname = `${$(this).data('href')}`;
+  })
+
+  $('.selecthouse__area--floor').on("mouseover", function(){ 
+    $('.selection__cover--text').show()
+    $('.selection__cover--number').html($(this).data('block'))
+    $('.selection__cover--text').css({
+      'top': `${($(this).offset().top - $('.selection__cover').offset().top) + 50}px`,
+      'left': `${($(this).offset().left) + 50}px`,
+    })
   })
 
 })
