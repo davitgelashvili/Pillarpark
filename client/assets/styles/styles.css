@@ -354,7 +354,7 @@ body {
   border: none;
 }
 .header__logo {
-  width: 118.98px;
+  width: 161px;
   display: block;
 }
 .header__logo img {
@@ -520,9 +520,8 @@ body {
   opacity: 0.6;
 }
 .group__cover {
-  width: 289.35px;
-  height: 400px;
-  margin-top: 160px;
+  width: 300px;
+  margin-top: 130px;
 }
 @media (max-width: 991px) {
   .group__cover {
@@ -563,6 +562,7 @@ body {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 24px;
+  padding-top: 100%;
 }
 @media (max-width: 767px) {
   .projects__slider--cover {
@@ -573,8 +573,8 @@ body {
 .projects__slider--img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  position: absolute;
+  bottom: 0;
 }
 .projects__slider--status {
   margin: 0;
@@ -613,6 +613,7 @@ body {
 }
 .projects__list {
   width: 100%;
+  margin-bottom: 100px;
 }
 @media (max-width: 767px) {
   .projects__list {
@@ -624,6 +625,7 @@ body {
   padding: 24px;
   border-radius: 16px;
   border: 1px solid rgba(63, 65, 65, 0.05);
+  margin-bottom: 32px;
 }
 @media (max-width: 991px) {
   .projects__item {
@@ -917,7 +919,7 @@ body {
   width: 100%;
 }
 .map iframe {
-  height: 415px;
+  height: 700px;
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
@@ -948,12 +950,13 @@ body {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 16px;
+  padding-top: 100%;
 }
 .news__item--img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  position: absolute;
+  bottom: 0;
 }
 .news__item--title {
   margin-bottom: 16px;
@@ -1055,11 +1058,13 @@ body {
 }
 .news .detail__cover {
   margin: 0;
-  margin-top: 32px;
-  width: 100%;
-  height: 431px;
+  margin-right: 52px;
+  margin-bottom: 30px;
+  width: 50%;
+  height: 500px;
   border-radius: 16px;
   overflow: hidden;
+  float: left;
 }
 .news .detail__cover--img {
   width: 100%;
@@ -1068,7 +1073,6 @@ body {
      object-fit: cover;
 }
 .news .detail__body {
-  margin-top: 32px;
   color: #3F4141;
   font-size: 16px;
   font-weight: 400;
@@ -1168,7 +1172,7 @@ body {
 
 .ordercall {
   background-color: rgba(120, 152, 104, 0.1);
-  padding: 80px 0;
+  padding: 200px 0;
 }
 @media (max-width: 991px) {
   .ordercall {
@@ -1364,24 +1368,25 @@ body {
   overflow: hidden;
   position: relative;
 }
+.selection__cover--text {
+  display: block;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.57px;
+  fill: #fff;
+}
 .selection__cover--svg {
   width: 100%;
-  left: 0;
+  top: 0;
+  left: 10px;
   position: absolute;
 }
 .selection__cover--svg polygon {
   cursor: pointer;
-  fill: transparent;
+  fill: rgba(120, 152, 104, 0.8);
 }
 .selection__cover--svg polygon:hover {
-  fill: rgba(120, 152, 104, 0.5);
-}
-.selection__cover--text {
-  position: absolute;
-  z-index: 1;
-  display: none;
-  font-size: 16px;
-  color: #fff;
+  fill: rgba(120, 152, 104, 0.8);
 }
 
 .livecamera {
@@ -1414,6 +1419,7 @@ body {
   margin-bottom: 24px;
 }
 .conditions__body {
+  max-width: 90%;
   color: #3F4141;
   font-size: 16px;
   font-weight: 400;
@@ -1424,7 +1430,7 @@ body {
   margin: 0;
 }
 .conditions__cover {
-  width: 344px;
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
   margin: 0;
@@ -1468,14 +1474,20 @@ body {
   width: 100%;
   height: 100%;
 }
-.selectfloor__area svg polygon {
+.selectfloor__area--floor {
   position: relative;
   cursor: pointer;
   fill: transparent;
 }
-.selectfloor__area svg polygon:hover {
+.selectfloor__area--floor:hover {
   fill: #789868;
-  opacity: 0.6;
+  opacity: 0.9;
+}
+.selectfloor__area--textarea {
+  display: none;
+}
+.selectfloor__area--text {
+  fill: #fff;
 }
 
 .m-select-floor__container {
@@ -1503,19 +1515,6 @@ body {
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-}
-
-.select-floor {
-  position: absolute;
-  display: none;
-  z-index: 1;
-  font-size: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.select-floor--text {
-  font-size: 14px;
-  color: #fff;
 }
 
 .selecthouse {
@@ -1557,38 +1556,42 @@ body {
   width: 100%;
   position: absolute;
   z-index: -1;
+  left: 4px;
 }
 .selecthouse__area a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.selecthouse__area--svg {
-  position: relative;
-}
-.selecthouse__area--svg .sold {
-  fill: rgba(73, 73, 74, 0.7);
-}
-.selecthouse__area--svg .reserv {
-  fill: rgba(196, 128, 99, 0.8);
-}
-.selecthouse__area--svg polygon {
+.selecthouse__area--group polygon {
   fill: transparent;
 }
-.selecthouse__area--svg polygon:hover {
+.selecthouse__area--group g g {
+  display: none;
+}
+.selecthouse__area--group.active {
   cursor: pointer;
-  fill: #719066;
-  opacity: 0.7;
 }
-.selecthouse__area--svg polygon.sold {
-  fill: url(#sold_image);
-  opacity: 1;
-  cursor: auto;
+.selecthouse__area--group.active:hover g g:nth-of-type(2) {
+  display: block;
 }
-.selecthouse__area--svg polygon.reserv {
-  fill: url(#reserv_image);
-  opacity: 1;
-  cursor: auto;
+.selecthouse__area--group.active:hover polygon {
+  opacity: 0.4;
+  fill: #718F66;
+}
+.selecthouse__area--group.sold polygon {
+  opacity: 0.4;
+  fill: #C58163;
+}
+.selecthouse__area--group.sold g g:nth-of-type(1) {
+  display: block;
+}
+.selecthouse__area--group.reserv polygon {
+  fill: #3F4040;
+  opacity: 0.52;
+}
+.selecthouse__area--group.reserv g g:nth-of-type(3) {
+  display: block;
 }
 
 .house__otherhouse {

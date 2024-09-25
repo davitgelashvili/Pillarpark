@@ -38,15 +38,12 @@ $(window).on("load", function(){
   })
 
   $('.selectfloor__area--floor').on("mouseover", function(){ 
-    $('.select-floor').show()
-    $('.select-floor--number').html($(this).data('floor'))
-    $('.select-floor').css({
-      'top': `${($(this).offset().top - $('.selectfloor__area').offset().top) + 10}px`,
-    })
+    let x = $(this).data('floor')
+    $(`.selectfloor__area--textarea.${x}`).show()
   })
 
   $('.selectfloor__area--floor').on("mouseout", function(){ 
-    $('.select-floor').hide()
+    $('.selectfloor__area--textarea').hide()
   })
 
 
@@ -54,30 +51,16 @@ $(window).on("load", function(){
     window.location.pathname = `${$(this).data('href')}`;
   })
 
-  $('.selection__cover--block').on("mouseover", function(){ 
-    $('.selection__cover--text').show()
-    $('.selection__cover--number').html($(this).data('block'))
-    $('.selection__cover--text').css({
-      'top': `${($(this).offset().top - $('.selection__cover').offset().top) + 50}px`,
-      'left': `${($(this).offset().left) + 50}px`,
-    })
-  })
+  // $('.selection__cover--block').on("mouseover", function(){ 
+  //   $('.selection__cover--text').show()
+  // })
 
-  $('.selection__cover--block').on("mouseout", function(){ 
-    $('.selection__cover--text').hide()
-  })
+  // $('.selection__cover--block').on("mouseout", function(){ 
+  //   $('.selection__cover--text').hide()
+  // })
 
-  $('.selecthouse__area--floor.active').click(function(){
+  $('.selecthouse__area--group.active').click(function(){
     window.location.pathname = `${$(this).data('href')}`;
-  })
-
-  $('.selecthouse__area--floor').on("mouseover", function(){ 
-    $('.selection__cover--text').show()
-    $('.selection__cover--number').html($(this).data('block'))
-    $('.selection__cover--text').css({
-      'top': `${($(this).offset().top - $('.selection__cover').offset().top) + 50}px`,
-      'left': `${($(this).offset().left) + 50}px`,
-    })
   })
 
 })

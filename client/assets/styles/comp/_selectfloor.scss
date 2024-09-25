@@ -24,17 +24,23 @@
 
         }
 
-        svg {
-            polygon {
-                position: relative;
-                cursor: pointer;
-                fill: transparent;
-            
-                &:hover {
-                    fill: #789868;
-                    opacity: 0.6;
-                }
+        &--floor {
+            position: relative;
+            cursor: pointer;
+            fill: transparent;
+
+            &:hover {
+                fill: #789868;
+                opacity: 0.9;
             }
+        }
+
+        &--textarea {
+            display: none;
+        }
+
+        &--text {
+            fill: #fff;
         }
     }
 }
@@ -71,19 +77,5 @@
                 32px
             );
         }
-    }
-}
-
-.select-floor {
-    position: absolute;
-    display: none;
-    z-index: 1;
-    font-size: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    &--text {
-        font-size: 14px;
-        color: #fff;
     }
 }
